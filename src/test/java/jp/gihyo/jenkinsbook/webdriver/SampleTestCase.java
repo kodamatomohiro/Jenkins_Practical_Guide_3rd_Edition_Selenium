@@ -11,7 +11,7 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import jp.gihyo.jenkinsbook.page.ResultPage;
 import jp.gihyo.jenkinsbook.page.TopPage;
@@ -24,8 +24,10 @@ public class SampleTestCase {
 	@BeforeClass
 	public static void setUpClass() throws IOException {
 		prop.load(new FileInputStream("target\\test-classes\\selenium.properties"));
-		System.setProperty("webdriver.gecko.driver", "C:/project/geckodriver.exe");
-		driver = new FirefoxDriver();
+//		System.setProperty("webdriver.gecko.driver", "C:/project/geckodriver.exe");
+//		driver = new FirefoxDriver();
+    		System.setProperty("webdriver.chrome.driver", "C:/project/chromedriver.exe");
+        	driver = new ChromeDriver();
 	}
 
 	@AfterClass

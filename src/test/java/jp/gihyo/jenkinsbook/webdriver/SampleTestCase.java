@@ -64,7 +64,8 @@ public class SampleTestCase {
 			greeting = "Good morning";
 		} else {
 			greeting = "Good afternoon";
-        }
+        	}
+		greeting = "Hello";
 		ResultPage resultPage = new ResultPage(driver);
 		assertEquals(greeting + ", Hoge Foo!!", resultPage.getText());
 	}
